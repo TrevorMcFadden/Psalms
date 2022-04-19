@@ -1,0 +1,44 @@
+﻿<Page x:Name="PsalmsPage"
+    x:Class="Psalms.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Psalms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="PsalmsGrid">
+        <Pivot x:Name="PsalmsPivotPivotPivot" Margin="0,83,0,0">
+            <PivotItem x:Name="PsalmsNowPlayingPivotItem" Header="Now playing: All">
+                <MediaElement x:Name="PsalmsMediaPlayer" AreTransportControlsEnabled="True" PosterSource="/Assets/Psalms Background.png" Source="/Songs/All.mp3"/>
+            </PivotItem>
+            <PivotItem x:Name="PsalmsSongPivotItem" Header="Songs">
+                <ListView x:Name="PsalmsSongBox" CanDragItems="True" CanReorderItems="True" Margin="0,0,0,10">
+                    <ListViewItem Content="All"/>
+                    <ListViewItem Content="Community"/>
+                    <ListViewItem Content="Connection"/>
+                    <ListViewItem Content="Day Well Spent"/>
+                    <ListViewItem Content="Day"/>
+                    <ListViewItem Content="Flux"/>
+                    <ListViewItem Content="Healing"/>
+                    <ListViewItem Content="Hybrid"/>
+                    <ListViewItem Content="Nova"/>
+                    <ListViewItem Content="Overdrive"/>
+                    <ListViewItem Content="Peace"/>
+                    <ListViewItem Content="Process"/>
+                    <ListViewItem Content="Purify"/>
+                    <ListViewItem Content="Slow"/>
+                    <ListViewItem Content="Sprinkle"/>
+                    <ListViewItem Content="Sub"/>
+                    <ListViewItem Content="Time"/>
+                    <ListViewItem Content="Travels"/>
+                    <ListViewItem Content="Vibes"/>
+                </ListView>
+            </PivotItem>
+        </Pivot>
+        <AppBarButton x:Name="PsalmsPlay" Icon="Play" ToolTipService.ToolTip="Play that song" Margin="65,38,0,0" Width="40" Height="40" CornerRadius="20,20,20,20"/>
+        <AppBarButton x:Name="PsalmsAddSong" Icon="Audio" ToolTipService.ToolTip="Add a song from your library" Height="40" Margin="20,38,0,0" Width="40" CornerRadius="20,20,20,20"/>
+        <TextBlock x:Name="UserNameBlock" HorizontalAlignment="Left" Margin="28,10,0,0" TextWrapping="Wrap" Text="Hello" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
